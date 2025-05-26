@@ -1,0 +1,11 @@
+macos-titlebar-style = "hidden"
+theme="/Users/michalnowicki/.cache/wal/ghostty.conf"
+font-family = "Liga SFMono Nerd Font"
+
+window-height = 55
+window-width = 170
+window-position-x = 4
+window-position-y = 0
+
+adjust-cell-height = 30%
+adjust-cell-width = 5%
