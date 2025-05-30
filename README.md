@@ -1,1 +1,4 @@
 # config-dotfiles
+
+textfox:
+https://color.firefox.com/?theme=XQAAAAI3AQAAAAAAAABBqYhm849SCia3ftKEGccwS-xMDPrv2Sw6Caq-qy5QgqeHG4K15Qddq6Hwkh9yucXst_OXKbM1PaNUORuTbO0Dnlj77ZJAaq221yzZxV1bMqCLNeHkwa3LNJ2Tbojzft3dgxAT_SaMtNdXFeavw32NwV0VdLiWP0_W1Fvi9Q3-4gGq4I-1hYgar1tZkx6Rnb7-nRNq2HFvAmwOT_rItFlVxwvmT80E0S50oxqbwVap9RYqxdoRpqK5JZccYPHoieUE__WqycA
