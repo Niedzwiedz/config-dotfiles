@@ -1,5 +1,5 @@
 macos-titlebar-style = "hidden"
-theme="/Users/michalnowicki/.cache/wal/ghostty.conf"
+theme="monoglow_mn"
 font-family = "Liga SFMono Nerd Font"
 
 window-height = 55
