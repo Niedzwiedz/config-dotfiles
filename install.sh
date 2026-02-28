@@ -28,4 +28,9 @@ backup_dir ~/.config/ghostty
 mkdir -p ~/.config/ghostty
 cp -r "$REPO/ghostty/." ~/.config/ghostty/
 
+# claude skills
+backup_dir ~/.claude/skills
+mkdir -p ~/.claude/skills
+cp -r "$REPO/skills/." ~/.claude/skills/
+
 echo "Done. Backups tagged: $TS"

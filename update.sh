@@ -12,4 +12,7 @@ echo "Updated tmux"
 rsync -a ~/.config/ghostty/ "$REPO/ghostty/"
 echo "Updated ghostty"
 
+rsync -a --exclude='omarchy' ~/.claude/skills/ "$REPO/skills/"
+echo "Updated skills"
+
 echo "Done. Run 'git diff' to review changes."

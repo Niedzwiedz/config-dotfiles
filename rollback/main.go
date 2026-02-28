@@ -26,6 +26,7 @@ var configs = []configDef{
 	{"ghostty", "~/.config/ghostty", "~/.config/ghostty.*.bak", true},
 	{"nvim", "~/.config/nvim", "~/.config/nvim.*.bak", true},
 	{"tmux", "~/.tmux.conf", "~/.tmux.conf.*.bak", false},
+	{"skills", "~/.claude/skills", "~/.claude/skills.*.bak", true},
 }
 
 // ── helpers ──────────────────────────────────────────────────────────────────
