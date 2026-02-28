@@ -1,50 +1,4 @@
 return {
-  -- {
-  --   'nvim-tree/nvim-tree.lua',
-  --   lazy = true,
-  --   dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional, for file icons
-  --   version = '*', -- optional, updated every week. (see issue #1193)
-  --   config = function ()
-  --     require("nvim-tree").setup({
-  --       sort_by = "case_sensitive",
-  --       view = {
-  --         adaptive_size = true,
-  --       },
-  --       renderer = {
-  --         group_empty = true,
-  --       },
-  --       filters = {
-  --         dotfiles = false,
-  --       },
-  --     })
-  --   end,
-  -- },
-    -- {
-    --   'dmtrKovalenko/fff.nvim',
-    --   build = function()
-    --     -- this will download prebuild binary or try to use existing rustup toolchain to build from source
-    --     -- (if you are using lazy you can use gb for rebuilding a plugin if needed)
-    --     require("fff.download").download_or_build_binary()
-    --   end,
-    --   -- if you are using nixos
-    --   -- build = "nix run .#release",
-    --   opts = { -- (optional)
-    --     debug = {
-    --       enabled = true,     -- we expect your collaboration at least during the beta
-    --       show_scores = false, -- to help us optimize the scoring system, feel free to share your scores!
-    --     },
-    --   },
-    --   -- No need to lazy-load with lazy.nvim.
-    --   -- This plugin initializes itself lazily.
-    --   lazy = false,
-    --   keys = {
-    --     {
-    --       "<leader>ff", -- try it if you didn't it is a banger keybinding for a picker
-    --       function() require('fff').find_files() end,
-    --       desc = 'FFFind files',
-    --     },
-    --   }
-  -- },
   {
     'nvim-telescope/telescope.nvim',
     version = '0.1.6',
@@ -136,16 +90,13 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = {
       'nvim-tree/nvim-web-devicons',
-      'nativerv/lualine-wal.nvim'
+      "wnkz/monoglow.nvim",
     },
     config = function()
         local bg = vim.api.nvim_get_hl(0, {name = 'Normal'})['background']
         require('lualine').setup {
           options = {
-            -- theme = "catppuccin",
             theme = 'auto',
-            -- section_separators = { left = '', right = '' },
-            -- component_separators = { left = '', right = '' },
             section_separators = '',
             component_separators = '',
             show_filename_only = false,   -- Shows shortened relative path when set to false.

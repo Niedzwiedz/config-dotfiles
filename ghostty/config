@@ -6,6 +6,8 @@ adjust-cell-width = 5%
 
 keybind = ctrl+shift+j=unbind
 
+background-opacity = 0.97
+
 # Slowdown mouse scrolling
 mouse-scroll-multiplier = 0.95
 

@@ -29,9 +29,6 @@ return {
     end,
   },
   {
-    'nvim-treesitter/nvim-treesitter-context'
-  },
-  {
     'stevearc/aerial.nvim',
     config = function()
       require('aerial').setup({
@@ -57,8 +54,6 @@ return {
     'saghen/blink.cmp',
     -- optional: provides snippets for the snippet source
     dependencies = {
-      -- "giuxtaposition/blink-cmp-copilot",
-      "fang2hou/blink-copilot",
       'rafamadriz/friendly-snippets'
     },
 
@@ -109,19 +104,7 @@ return {
       -- },
 
       sources = {
-        default = { "lsp", "path", "snippets", "buffer", "copilot" },
-        providers = {
-          copilot = {
-            name = "copilot",
-            module = "blink-copilot",
-            score_offset = 100,
-            async = true,
-            opts = {
-              max_completions = 3,  -- Override global max_completions
-              kind_hl = "treesitter"
-            }
-          },
-        },
+        default = { "lsp", "path", "snippets", "buffer" },
       },
       -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
       -- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
@@ -134,21 +117,6 @@ return {
     config = function(_, opts)
       -- You can also use the `setup` function to set up the plugin
       require("blink.cmp").setup(opts)
-
-      vim.api.nvim_create_autocmd('User', {
-        pattern = 'BlinkCmpMenuOpen',
-        callback = function()
-          require("copilot.suggestion").dismiss()
-          vim.b.copilot_suggestion_hidden = true
-        end,
-      })
-
-      vim.api.nvim_create_autocmd('User', {
-        pattern = 'BlinkCmpMenuClose',
-        callback = function()
-          vim.b.copilot_suggestion_hidden = false
-        end,
-      })
     end,
   },
   {
@@ -278,6 +246,8 @@ return {
   {
     'dgagn/diagflow.nvim',
     event = 'LspAttach',
-    opts = {}
+    opts = {
+        placement = 'inline'
+    }
   }
 }

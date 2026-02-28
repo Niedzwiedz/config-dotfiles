@@ -1,20 +1,4 @@
 return {
-    -- {
-    --     dir = "~/Work/neovim/doomtax.nvim",
-    --     lazy = true,
-    --     cmd = {
-    --         "Doomtax",
-    --         "DoomtaxToggle",
-    --     },
-    --     keys = {
-    --         { "<leader>dt", "<cmd>Doomtax<CR>", mode = "v", desc = "Align assigments" }
-    --     }
-    -- },
-    -- {
-    --     "Niedzwiedz/doomtax.nvim",
-    --     lazy = true,
-    --     cmd = { "Doomtax" }
-    -- },
   {
       'nvim-mini/mini.align',
       version = false,
@@ -33,23 +17,11 @@ return {
       -- refer to the configuration section below
     }
   },
-  -- {
-  --   "ThePrimeagen/git-worktree.nvim",
-  --   lazy = true,
-  --   config = function()
-  --     require("git-worktree").setup({})
-
-  --     local telescope = require("telescope")
-  --     telescope.load_extension('git_worktree')
-  --     local git_worktree = telescope.extensions.git_worktree
-
-
-  --     vim.keymap.set('n', '<leader>gwl', git_worktree.git_worktrees, { desc = "Find Git worktrees" })
-  --     vim.keymap.set('n', '<leader>gwc', git_worktree.create_git_worktree, { desc = "Create Git worktree" })
-  --   end
-  -- },
   {
     "kdheepak/lazygit.nvim",
+    config = function()
+        vim.g.lazygit_theme = false
+    end,
     lazy = true,
     cmd = {
       "LazyGit",
@@ -86,27 +58,6 @@ return {
       require('spectre').setup()
     end,
   },
-  -- {
-  --   'ThePrimeagen/harpoon',
-  --   lazy = true,
-  --   dependencies = 'nvim-lua/plenary.nvim',
-  --   config = function()
-  --     local mark = require("harpoon.mark")
-  --     vim.keymap.set('n', '<leader>mh', mark.add_file, { desc = "Add file to Harpoon" })
-
-  --     mark.remove_file = function()
-  --       mark.rm_file(mark.get_current_file())
-  --     end
-
-  --     vim.keymap.set('n', '<leader>rh', mark.rm_file, { desc = "Remove file from Harpoon" })
-
-  --     local ui = require("harpoon.ui")
-  --     vim.keymap.set('n', '<leader>h', ui.toggle_quick_menu, { desc = "Toggle Harpoon menu" })
-
-  --     require("telescope").load_extension('harpoon')
-  --     vim.keymap.set('n', '<leader>fh', ":Telescope harpoon marks<CR>", { desc = "Find Harpoon marks" })
-  --   end,
-  -- },
   {
     'mbbill/undotree',
     lazy = true,
