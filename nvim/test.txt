@@ -1,0 +1,63 @@
+I want to create neovim plugin for ease of fomatting hashes/objects/variables so that their values
+are in a single column that is adjusted to longest hash_key/object element/varialbe. For me and I
+guess doom developers this it more readable. Changes should be made on a selection. trigger should
+be up to user, be it shortcut or command in selection :'<,'>doom!. For myself I want command.
+I dont want you to write any code unless I ask, I want you to walk me throught the process of
+creating that plugin. When designing plan and solution make sure to focus on performance. last thing
+I want is to wait for this change to happen after pressing enter
+
+case 1
+abc: 1
+abcd: 2
+abcde: 3
+ab: 4
+
+case 1 result
+abc:    1
+abcd:   2
+abcde:  3
+ab:     4
+
+
+case 2
+abc = 1
+abcd = 2
+abcde = 3
+ab = 4
+
+case 2 result
+abc     = 1
+abcd    = 2
+abcde   = 3
+ab      = 4
+
+abc = 1
+abcd = 2
+assrbbbbbbbbbbbbbbbbbbbbbbbbbbbcde = 3
+ab = 4
+abc = 1
+abcd = 2
+assrbbbbbbbbbbbbbbbbbbbbbbbbbbbcde = 3
+ab = 4
+abc = 1
+abcd = 2
+assrbbbbbbbbbbbbbbbbbbbbbbbbbbbcde = 3
+ab = 4
+abc = 1
+abcd = 2
+assrbbbbbbbbbbbbbbbbbbbbbbbbbbbcde = 3
+ab = 4
+abc = 1
+abcd = 2
+assrbbbbbbbbbbbbbbbbbbbbbbbbbbbcde = 3
+ab = 4
+
+abc := 1
+abcd := 2
+assrbbbbbbbbbbbbbbbbbbbbbbbbbbbcde := 3
+ab := 4
+
+abc => 1
+abcd => 2
+assrbbbbbbbbbbbbbbbbbbbbbbbbbbbcde => 3
+ab => 4
