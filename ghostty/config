@@ -1,11 +1,16 @@
-macos-titlebar-style = "hidden"
 theme="monoglow_mn"
-font-family = "Liga SFMono Nerd Font"
-
-window-height = 55
-window-width = 170
-window-position-x = 4
-window-position-y = 0
+font-family = BlexMonoNerdFontMono
 
 adjust-cell-height = 30%
 adjust-cell-width = 5%
+
+keybind = ctrl+shift+j=unbind
+
+# Slowdown mouse scrolling
+mouse-scroll-multiplier = 0.95
+
+# Fix general slowness on hyprland (https://github.com/ghostty-org/ghostty/discussions/3224)
+async-backend = epoll
+
+# MacOS specific
+macos-titlebar-style = "hidden"
